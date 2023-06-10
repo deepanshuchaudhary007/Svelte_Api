@@ -185,7 +185,7 @@ def logout(request):
 
 ################### User Profile Functions Start #################
 @api_view(['GET'])
-# @permission_classes([IsAuthenticated])        
+@permission_classes([IsAuthenticated])        
 def profile(request, user_code):
     try:        
         message = "User Details"

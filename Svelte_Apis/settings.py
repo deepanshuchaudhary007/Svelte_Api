@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'users',    
     'rest_framework', 
     'rest_framework_simplejwt',
+    # 'guest_user',
 ]
 
 MIDDLEWARE = [
@@ -122,6 +123,7 @@ AUTHENTICATION_BACKENDS = (
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (
         'rest_framework_simplejwt.authentication.JWTAuthentication',
+        # 'guest_user.backends.GuestBackend',
         # 'rest_framework.permissions.IsAuthenticated',
     )
 }
